@@ -1,0 +1,39 @@
+<!DOCTYpE HTML pUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>工具箱</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	
+<script type="text/javascript" src="../head.js"></script>
+</head>
+
+<body>
+<div id="ip">
+
+
+</div>
+
+<script>
+function getIp(){
+	$.ajax({
+		type : 'GET',
+		url : '/edupro/zutils/getIp',
+		data : {},
+		dataType : "json",
+		success : function(data) {
+			$("#ip").text("您的IP地址为："+data.ip);
+		},
+		error : function(response) {
+			alert("Error, please contact the administrator!");
+		}
+	});
+	
+}
+getIp();
+</script>
+
+</body>
+
+</html>
