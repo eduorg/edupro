@@ -10,15 +10,21 @@ import pers.zander.edu.user.web.model.SysUserModel;
 
 /**
  * 业务接口
+ * 
  * @author 赵召
- * Mar 21, 2016 10:01:16 AM
+ *         Mar 21, 2016 10:01:16 AM
  */
 public interface SysUserService {
 
-	public void addBean(SysUser bean);
-	public List<SysUser> getBean(SysUserModel model);
-	public SysUser getBeanById(SysUserModel model);
-	public List<SysUser> getAllBean();
-	public Page<SysUser> getBeanByPage(SysUserModel model,Pageable pageable);
-	public void delBean(Long id);
+  public void addBean(SysUser bean);
+
+  public void delBean(Long id);
+
+  public List<SysUser> getAllBean();
+
+  public List<SysUser> getBean(SysUserModel model);
+
+  public SysUser getBeanById(SysUserModel model);
+
+  public Page<SysUser> getBeanByPage(SysUserModel model, Pageable pageable);
 }
